@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Routes, BrowserRouter} from 'react-router-dom';
+import {Route, Routes, Link} from 'react-router-dom';
 
 import PokemonList from './components/pokemonsList/PokemonsList';
 import PokemonComponent from './components/pokemon/PokemonComponent';
@@ -8,20 +8,18 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter>
-    <Routes>
-      <div className="App">
+<div className="App">
         <style jsx global>{`
         body {
           margin: 0px;
           padding: 0px;
         }
       `}</style>
+    <Routes>
       <Route exact path="/" element={<PokemonComponent />} />
       <Route exact path="/pokemons" element={ <PokemonList />} />
-    </div>
     </Routes>
-    </BrowserRouter>
+    </div>
     
   );
 }
