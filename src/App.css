@@ -1,9 +1,7 @@
 .App {
-  background-image: url('./img/pokemons-wp.png');
+  background-image: url('./img/main-page-wp.gif');
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-size: 100%;
 }
 
 
