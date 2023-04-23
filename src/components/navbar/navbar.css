@@ -1,0 +1,68 @@
+.nav{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+.border{
+    height: calc(100% + 4rem);
+    width: 1px;
+    background-color: rgb(255, 255, 255, 0.1);
+}
+
+.logo-menu-section{
+    flex-basis: calc(100% / 1.5);
+    padding: 2rem 2rem;
+    border-right: 1px solid rgb(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+}
+
+.logo-section{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drop-down-menu-setion{
+    height: 100%;
+    width: 70%;
+    padding-left: 2rem;
+}
+
+.random-pokemon-section,
+.app-name-section{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.random-poke-icon{
+    cursor: pointer;
+}
+
+.random-pokemon-section{
+    border-right: 1px solid rgb(255, 255, 255, 0.1);
+    width: calc(50% - 1px);
+}
+
+.logo{
+    height: 3rem;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.logo:hover{
+    transform: rotate(360deg);
+}
+
+.random-poke-app-name-section{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+

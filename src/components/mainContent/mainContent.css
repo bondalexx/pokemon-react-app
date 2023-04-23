@@ -1,0 +1,86 @@
+.main{
+    flex-grow: 1;
+}
+
+.article{
+    display: grid;
+    height: 100%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr;
+}
+
+.main-section {
+    height: 100%;
+    border: 1ps solid rgb(255, 255, 255,0.1);
+}
+
+.main-nav-section,
+.description-section {
+    border-left: 1px solid rgb(255, 255, 255,0.1);
+}
+
+.main-nav-section,
+.title-section {
+    border-top: 1px solid rgb(255, 255, 255,0.1);
+}
+
+.poke-img{
+    height: 50%;
+    cursor: pointer;
+}
+
+.img-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.title-section{
+    display: flex;
+    align-items: center;
+    padding: 0 80px;
+    justify-content: space-between;
+}
+
+.poke-name{
+    font-size: 6rem;
+    cursor: pointer;
+}
+
+.main-nav-section{
+    display: flex;
+}
+
+.arrow-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+.left-arrow{
+    width: calc(50% - 1px);
+    border-right: 1px solid rgb(255, 255, 255,0.1);
+}
+
+.right-arrow:hover{
+    padding-left: 30px;
+    background-color: #090E1D;
+}
+
+.left-arrow:hover{
+    padding-right: 30px;
+    background-color: #090E1D;
+}
+
+.fa-rotate{
+    transition: all ease 0.7s;
+    cursor: pointer;
+}
+
+.fa-rotate:hover{
+    transform: rotate(180deg);
+}

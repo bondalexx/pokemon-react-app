@@ -1,6 +1,6 @@
 .pokemon {
   position: absolute;
-  margin: 50px 0 0 0;
+  margin-top: 50px;
   left: 7%;
 }
   
@@ -13,6 +13,7 @@
 .pokemon-sign {
   transition: all 0.3s;
 }
+
 
 .pokemon-container{
   background-image: url('../../../src/img/main-page-wp.gif');
