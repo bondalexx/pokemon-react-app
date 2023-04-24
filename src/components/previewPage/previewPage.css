@@ -1,19 +1,17 @@
 .pokemon {
   position: absolute;
-  margin-top: 50px;
+  margin-top: 70px;
   left: 7%;
 }
   
+.pokemon-sign {
+  transition: transform 0.3s ease-in-out;
+}
+
 .pokemon-sign:hover {
   transform: translateY(-10px);
-  transition: all 0.3s;
   cursor: pointer;
 }
-
-.pokemon-sign {
-  transition: all 0.3s;
-}
-
 
 .pokemon-container{
   background-image: url('../../../src/img/main-page-wp.gif');
