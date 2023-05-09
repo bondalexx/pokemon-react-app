@@ -1,68 +1,105 @@
-.nav{
-    display: flex;
-    width: 100%;
-    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+.nav {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.1);
 }
 
-.border{
-    height: calc(100% + 4rem);
-    width: 1px;
-    background-color: rgb(255, 255, 255, 0.1);
+.border {
+  height: calc(100% + 4rem);
+  width: 1px;
+  background-color: rgb(255, 255, 255, 0.1);
 }
 
-.logo-menu-section{
-    flex-basis: calc(100% / 1.5 + 1px);
-    padding: 2rem 2rem;
-    border-right: 1px solid rgb(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: center;
+.logo-menu-section {
+  flex-basis: calc(100% / 1.5 + 1px);
+  padding: 2rem 2rem;
+  border-right: 1px solid rgb(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
 }
 
-.logo-section{
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.logo-section {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.drop-down-menu-setion{
-    height: 100%;
-    width: 70%;
-    padding-left: 2rem;
+.drop-down-menu-setion {
+  height: 100%;
+  width: 70%;
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
 .random-pokemon-section,
-.app-name-section{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.app-name-section {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.random-poke-icon{
-    cursor: pointer;
+.random-poke-icon {
+  cursor: pointer;
 }
 
-.random-pokemon-section{
-    border-right: 1px solid rgb(255, 255, 255, 0.1);
-    width: calc(50% - 1px);
+.random-pokemon-section {
+  border-right: 1px solid rgb(255, 255, 255, 0.1);
+  width: calc(50% - 1px);
 }
 
-.logo{
-    height: 3rem;
-    transition: transform 0.5s ease-in-out;
-    cursor: pointer;
+.logo {
+  height: 3rem;
+  transition: transform 0.5s ease-in-out;
+  cursor: pointer;
 }
 
-.logo:hover{
-    transform: rotate(360deg);
+.logo:hover {
+  transform: rotate(360deg);
 }
 
-.random-poke-app-name-section{
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
+.random-poke-app-name-section {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 
+.search-input {
+  height: 100%;
+  width: 70%;
+  background-color: #050a18;
+  border: 1px solid rgb(255, 255, 255, 0.1);
+  border-radius: 30px;
+  color: #fff;
+  font-size: 16px;
+  padding-left: 20px;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.submit-button {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #ffffff;
+  color: #050a18;
+}
+
+.submit-button:active {
+  transform: scale(0.95);
+}

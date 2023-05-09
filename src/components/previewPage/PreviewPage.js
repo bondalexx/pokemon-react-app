@@ -1,11 +1,10 @@
-import React, {useEffect, useState} from 'react';
-import {Link, NavLink} from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
-import './previewPage.css'
-import img from '../../img/pokemon-sign.png'
+import "./previewPage.css";
+import img from "../../img/pokemon-sign.png";
 
 const PreviewPage = () => {
-  
   const [mouseOver, setMouseOver] = useState(false);
 
   useEffect(() => {
@@ -55,11 +54,10 @@ const PreviewPage = () => {
   };
 
   return (
-    <div className='pokemon-container'>
-
-  <div className='pokemon'>
-    <Link to="/pokemons">
-    <img
+    <div className="pokemon-container">
+      <div className="pokemon">
+        <Link to="/pokemons">
+          <img
             className="pokemon-sign"
             width="600px"
             alt="pokemon-sign"
@@ -67,8 +65,8 @@ const PreviewPage = () => {
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
           />
-    </Link>
-  </div>
+        </Link>
+      </div>
     </div>
   );
 };

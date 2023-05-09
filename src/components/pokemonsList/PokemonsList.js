@@ -1,25 +1,28 @@
-import React, {useEffect} from "react";
+import React, { useState } from "react";
 import { usePokemonsStore } from "../../store/usePokemonsStore";
 
 import Navbar from "../navbar/Navbar";
 import MainContent from "../mainContent/MainContent";
 
-import './pokemonList.css'
+import "./pokemonList.css";
 
 const PokemonList = () => {
-    const {pokemons , getPokemons} = usePokemonsStore()
-    useEffect(() => {
-        getPokemons();
-    }, []);
+  const { getPokemons } = usePokemonsStore();
+  const [activeIndex, setActiveIndex] = useState(0);
 
-    console.log(pokemons);
-
-    return(
-        <div className="pokemon-list">
-        <Navbar></Navbar>
-        <MainContent></MainContent>
-        </div>
-    )
-}
+  const onReturn = () => {
+    getPokemons(0);
+    setActiveIndex(0);
+  };
+  return (
+    <div className="pokemon-list">
+      <Navbar onReturn={onReturn}></Navbar>
+      <MainContent
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+      ></MainContent>
+    </div>
+  );
+};
 
 export default PokemonList;
