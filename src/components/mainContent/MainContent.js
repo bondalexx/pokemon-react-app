@@ -4,11 +4,12 @@ import { usePokemonsStore } from "../../store/usePokemonsStore";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import pokeLogo from "../../img/pokeball.png";
 
 import "./mainContent.css";
 
 const MainContent = ({ activeIndex, setActiveIndex }) => {
-  const { pokemons, getPokemons } = usePokemonsStore();
+  const { pokemons, getPokemons, loading } = usePokemonsStore();
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
@@ -69,10 +70,14 @@ const MainContent = ({ activeIndex, setActiveIndex }) => {
       >
         <section className="img-section main-section">
           <div className="card-container">
-            <img
-              src={poke.sprites.other["official-artwork"].front_default}
-              alt={poke.name}
-            />
+            {loading ? (
+              <img className="scroll-logo" src={pokeLogo} alt="Loading" />
+            ) : (
+              <img
+                src={poke.sprites.other["official-artwork"].front_default}
+                alt={poke.name}
+              />
+            )}
           </div>
         </section>
 
