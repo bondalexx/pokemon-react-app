@@ -61,6 +61,10 @@ const MainContent = ({ activeIndex, setActiveIndex }) => {
     }
   };
 
+  if (uniquePokemons.length === 1) {
+    setActiveIndex(0);
+  }
+
   const items = uniquePokemons.map((poke, i) => {
     return (
       <div
