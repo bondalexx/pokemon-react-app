@@ -10,7 +10,6 @@ import "./mainContent.css";
 const MainContent = ({ activeIndex, setActiveIndex }) => {
   const { pokemons, getPokemons } = usePokemonsStore();
   const [offset, setOffset] = useState(0);
-  const [pokeEnded, setPokeEnded] = useState(false);
 
   useEffect(() => {
     onRequest(offset);
@@ -36,33 +35,29 @@ const MainContent = ({ activeIndex, setActiveIndex }) => {
       ended = true;
     }
     setOffset(offset + 20);
-    setActiveIndex(0);
-    setPokeEnded(ended);
   };
 
   const handleRightButton = () => {
     if (uniquePokemons.length > 1) {
       if (activeIndex + 1 <= uniquePokemons.length - 1) {
         setActiveIndex(activeIndex + 1);
-        setPokeEnded(false);
       } else {
         onRequest(offset);
       }
-    } else {
-      setPokeEnded(false);
     }
   };
-
   const handleLeftButton = () => {
-    if (activeIndex - 1 >= 0) {
+    if (activeIndex > 0) {
       setActiveIndex(activeIndex - 1);
     } else {
-      setPokeEnded(true);
     }
   };
 
   if (uniquePokemons.length === 1) {
     setActiveIndex(0);
+  }
+  if (uniquePokemons.length === 21) {
+    uniquePokemons.shift();
   }
 
   const items = uniquePokemons.map((poke, i) => {

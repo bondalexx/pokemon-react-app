@@ -8,31 +8,24 @@ export const usePokemonsStore = create((set, getState) => ({
     set({ loading: true });
 
     try {
-      set({ pokemons: [] });
-
       const response = await fetch(
         `https://pokeapi.co/api/v2/pokemon/?offset=${offset}`
       );
       const data = await response.json();
-      const newPokemons = [];
-
-      const currentState = getState();
-      const { pokemons } = currentState;
-
       const pokemonPromises = data.results.map(async (item) => {
         const res = await fetch(item.url);
         return res.json();
       });
 
       const resolvedPokemons = await Promise.all(pokemonPromises);
+      const currentState = getState();
+      const { pokemons } = currentState;
 
       const uniquePokemons = resolvedPokemons.filter(
         (pokemon) => !pokemons.some((p) => p.id === pokemon.id)
       );
 
-      newPokemons.push(...uniquePokemons);
-
-      set((state) => ({ pokemons: [...state.pokemons, ...newPokemons] }));
+      set((state) => ({ pokemons: [...state.pokemons, ...uniquePokemons] }));
     } catch (error) {
       set({ error: error.message });
     } finally {
