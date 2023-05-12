@@ -24,7 +24,9 @@ export const usePokemonsStore = create((set, getState) => ({
       const uniquePokemons = resolvedPokemons.filter(
         (pokemon) => !pokemons.some((p) => p.id === pokemon.id)
       );
-
+      if (pokemons.length === 1) {
+        pokemons.shift();
+      }
       set((state) => ({ pokemons: [...state.pokemons, ...uniquePokemons] }));
     } catch (error) {
       set({ error: error.message });

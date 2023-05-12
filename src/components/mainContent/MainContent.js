@@ -57,9 +57,6 @@ const MainContent = ({ activeIndex, setActiveIndex }) => {
   if (uniquePokemons.length === 1) {
     setActiveIndex(0);
   }
-  if (uniquePokemons.length === 21) {
-    uniquePokemons.shift();
-  }
 
   const items = uniquePokemons.map((poke, i) => {
     return (
