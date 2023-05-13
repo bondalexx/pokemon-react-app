@@ -1,6 +1,12 @@
-.pokemon-list{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    color: #fff;
+.pokemon-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: #fff;
+}
+
+@media (max-width: 425px) {
+  .pokemon-list {
+    overflow-x: auto;
+  }
 }

@@ -4,6 +4,7 @@ import { usePokemonsStore } from "../../store/usePokemonsStore";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import pokeLogo from "../../img/pokeball.png";
+import pokemonSign from "../../img/pokemon-sign.png";
 import "./navbar.css";
 
 const Navbar = ({ onReturn }) => {
@@ -50,7 +51,14 @@ const Navbar = ({ onReturn }) => {
         </div>
       </div>
       <div className="random-poke-app-name-section">
-        <div className="random-pokemon-section"></div>
+        <div className="random-pokemon-section">
+          <p className="nav-poke-sign">Who is that</p>
+          <img
+            className="pokemon_sign"
+            src={pokemonSign}
+            alt="pokemon-sign"
+          ></img>
+        </div>
         <div className="app-name-section">
           <p>PokeApp</p>
         </div>

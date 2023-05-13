@@ -12,10 +12,12 @@
   position: absolute;
   top: 0px;
   left: 0px;
+  /* overflow: auto; */
 }
 
 .article[status="inactive"] {
   transform: translateX(-100%);
+  display: none;
 }
 
 .main-section {
@@ -161,4 +163,49 @@
 .scroll-logo {
   height: 10rem;
   animation: rotate 0.3s infinite linear;
+}
+
+@media (max-width: 425px) {
+  .article {
+    grid-template-columns: 425px;
+    grid-template-rows: 400px 500px 150px 200px;
+  }
+  .pokemon-img {
+    width: 300px;
+  }
+  .description-section {
+    display: flex;
+    align-items: unset;
+    gap: 0;
+    padding-top: 30px;
+    border-top: 1px solid rgb(255, 255, 255, 0.1);
+    justify-content: center;
+    flex-direction: unset;
+    border-left: none;
+  }
+  .poke-name {
+    font-size: 24px;
+  }
+  .scroll-logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 375px) {
+  .article {
+    grid-template-columns: 375px;
+  }
+  .title-section {
+    padding: 0;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 320px) {
+  .article {
+    grid-template-columns: 320px;
+  }
+  .title-section {
+    padding: 0;
+    justify-content: space-around;
+  }
 }
