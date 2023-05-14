@@ -3,7 +3,7 @@
   margin-top: 70px;
   left: 7%;
 }
-  
+
 .pokemon-sign {
   transition: transform 0.3s ease-in-out;
 }
@@ -13,9 +13,43 @@
   cursor: pointer;
 }
 
-.pokemon-container{
-  background-image: url('../../../src/img/main-page-wp.gif');
+.pokemon-container {
+  background-image: url("../../../src/img/main-page-wp.gif");
   height: 100vh;
   background-size: 100%;
 }
 
+@media (max-width: 1440px) {
+  .pokemon-container {
+    background-size: 100%;
+    background-position: 0%;
+  }
+  .pokemon-sign {
+    width: 400px;
+  }
+}
+@media (max-width: 1024px) {
+  .pokemon-container {
+    background-size: 110%;
+  }
+  .pokemon-sign {
+    width: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .pokemon-container {
+    background-size: 150%;
+    background-position: 30%;
+  }
+}
+@media (max-width: 425px) {
+  .pokemon-container {
+    background-size: 300%;
+    background-position: 40%;
+  }
+}
+@media (max-width: 320px) {
+  .pokemon-container {
+    background-size: 350%;
+  }
+}
