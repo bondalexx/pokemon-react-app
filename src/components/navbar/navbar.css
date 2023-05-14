@@ -169,3 +169,12 @@
     width: 300px;
   }
 }
+
+@media (max-width: 768px) {
+  .logo-section {
+    width: auto;
+  }
+  .logo {
+    margin-right: 2rem;
+  }
+}
