@@ -161,7 +161,7 @@
   animation: rotate 0.3s infinite linear;
 }
 
-@media (max-height: 725px) {
+@media (max-height: 850px) {
   .main {
     height: 612px;
   }
