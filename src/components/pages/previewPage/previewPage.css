@@ -14,7 +14,7 @@
 }
 
 .pokemon-container {
-  background-image: url("../../../src/img/main-page-wp.gif");
+  background-image: url("../../../img/main-page-wp.gif");
   height: 100vh;
   background-size: 100%;
 }

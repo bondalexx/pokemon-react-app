@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import "./previewPage.css";
-import img from "../../img/pokemon-sign.png";
+import img from "../../../img/pokemon-sign.png";
 
 const PreviewPage = () => {
   const [mouseOver, setMouseOver] = useState(false);
