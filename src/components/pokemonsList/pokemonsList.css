@@ -12,12 +12,18 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  /* overflow: auto; */
+  transition: transform 400ms ease;
 }
 
-.article[status="inactive"] {
-  transform: translateX(-100%);
-  display: none;
+.article[data-status="unknown"] {
+  transform: translateX(100%);
+}
+
+.article[data-status="before"] {
+  transform: translateX(-50%) scale(0);
+}
+.article[data-status="after"] {
+  transform: translateX(50%) scale(0);
 }
 
 .main-section {

@@ -39,8 +39,13 @@ const PokemonsList = ({ activeIndex, setActiveIndex }) => {
   };
 
   const handleRightButton = () => {
+    const nextIndex = activeIndex + 1;
     if (uniquePokemons.length > 1) {
+      const currentGroup = document.getElementById(`${activeIndex}`);
+      const nextGroup = document.getElementById(`${nextIndex}`);
       if (activeIndex + 1 <= uniquePokemons.length - 1) {
+        currentGroup.dataset.status = "before";
+        nextGroup.dataset.status = "active";
         setActiveIndex(activeIndex + 1);
       } else {
         onRequest(offset);
@@ -48,7 +53,12 @@ const PokemonsList = ({ activeIndex, setActiveIndex }) => {
     }
   };
   const handleLeftButton = () => {
+    const nextIndex = activeIndex - 1;
     if (activeIndex > 0) {
+      const currentGroup = document.getElementById(`${activeIndex}`);
+      const nextGroup = document.getElementById(`${nextIndex}`);
+      currentGroup.dataset.status = "after";
+      nextGroup.dataset.status = "active";
       setActiveIndex(activeIndex - 1);
     } else {
     }
@@ -61,8 +71,9 @@ const PokemonsList = ({ activeIndex, setActiveIndex }) => {
   const items = uniquePokemons.map((poke, i) => {
     return (
       <div
-        className="article"
-        status={`${i === activeIndex ? "active" : "inactive"}`}
+        className={`article ${i}`}
+        data-status={`${i === 0 ? "active" : "unknown"}`}
+        id={i}
         key={poke.id}
       >
         <section className="img-section main-section">
